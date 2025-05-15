@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/userdb?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+azure:
+  storage:
+    connection-string: DefaultEndpointsProtocol=https;AccountName=productstorageacountt;AccountKey=nEe8zF6baiS+DizQcu8oRrifc+PKpDJyyasD32+Zvu9gH4sZGOelKpWmSVhGAJeItocKhYeV/1Jw+AStXXJRag==;EndpointSuffix=core.windows.net
+    container-name: profile-pics
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

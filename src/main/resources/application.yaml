@@ -47,7 +47,10 @@ azure:
     container-name: profile-pics
 
 management:
+  endpoint:
+    health:
+      show-details: always   # Shows component details in /actuator/health
   endpoints:
     web:
       exposure:
-        include: health,info
+        include: health, info  #  Expose /actuator/health and /actuator/info
